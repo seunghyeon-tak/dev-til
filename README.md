@@ -1,4 +1,4 @@
-# 🧠 Today I Learned (TIL)
+# 🚀 Today I Learned (TIL)
 
 하루하루 배운 내용을 기록하는 공간입니다.  
 짧게라도 꾸준히 기록하면서 성장해나가려 합니다.
