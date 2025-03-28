@@ -6,16 +6,18 @@
 ## 📁 폴더 구조 예시
 
 - `Spring/` : 스프링 관련 내용
+- `Database/` : 데이터베이스 정리
 - `Redis/` : Redis 사용법, 팁
 - `Git/` : Git 명령어, 브랜치 전략 등
+- `Network/` : 네트워크 기초 지식
+- `OS/` : 운영체제 개념 정리
+- `DataStructure/` : 자료구조 정리
 
-## 📅 최근 기록
+## 📅 최근 기록 (전체 보기 👉 [전체 목록 보기](./all-posts.md))
 
 | 날짜 | 주제 | 카테고리 |
 |------|------|----------|
-| 2025-03-27 | @Transactional(readOnly=true) | Spring |
-| 2025-03-28 | Redis TTL 설정 방법 | Redis |
-| 2025-03-29 | Git rebase vs merge 차이 | Git |
+| 2025-03-29 | [프로세스 vs 스레드 차이](OS/process-vs-thread.md) | OS |
 
 ## ✅ 작성 규칙
 
