@@ -4,6 +4,8 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-04-03 | [멀티스레딩을 사용하는 이유](OS/multithreading/why-ues-multithreading.md) | OS |
+| 2025-04-03 | [스레드란?](OS/multithreading/thread.md) | OS |
 | 2025-04-02 | [Spring jpa pageable](Spring/jpa/pageable.md) | Spring |
 | 2025-03-31 | [PCB vs TCB](OS/pcb-vs-tcb.md) | OS |
 | 2025-03-31 | [컨텍스트 스위칭](OS/context-swwitching.md) | OS |
