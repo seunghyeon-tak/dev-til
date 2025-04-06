@@ -4,10 +4,12 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-04-06 | [알고리즘 - BFS](DataStructure/bfs.md) | DataStructure |
+| 2025-04-05 | [데드락 vs 기아상태](OS/synchronization/deadlock-and-starvation.md) | OS |
 | 2025-04-04 | [Mutex(뮤텍스) vs Semaphore(세마포어)](OS/synchronization/mutex-vs-semaphore.md) | OS |
 | 2025-04-04 | [Critical Section(임계 영역)](OS/synchronization/critical-section.md) | OS |
 | 2025-04-04 | [Race Condition(경쟁 상태)](OS/synchronization/race-condition.md) | OS |
-| 2025-04-04 | [DFS](DataStructure/dfs.md) | DataStructure |
+| 2025-04-04 | [알고리즘 - DFS](DataStructure/dfs.md) | DataStructure |
 | 2025-04-03 | [멀티스레딩을 사용하는 이유](OS/multithreading/why-ues-multithreading.md) | OS |
 | 2025-04-03 | [스레드란?](OS/multithreading/thread.md) | OS |
 | 2025-04-02 | [Spring jpa pageable](Spring/jpa/pageable.md) | Spring |
