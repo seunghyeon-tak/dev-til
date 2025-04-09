@@ -12,6 +12,7 @@
 - `Network/` : 네트워크 기초 지식
 - `OS/` : 운영체제 개념 정리
 - `DataStructure/` : 자료구조 정리
+- `Backend-infra` : 백엔드 인프라 관련 지식 정리
 
 ## 📅 최근 기록 (전체 보기 👉 [전체 목록 보기](./all-posts.md))
 
