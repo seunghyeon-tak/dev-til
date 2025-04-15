@@ -4,6 +4,7 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-04-15 | [OSI 7계층](Network/osi-7-layer.md) | Network |
 | 2025-04-13 | [CPU 스케줄링](OS/scheduling/cpu-scheduling.md) | OS |
 | 2025-04-09 | [동시성 문제](Backend-infra/concurrency.md) | Backend-infra |
 | 2025-04-07 | [Thread Pool](OS/multithreading/thread-pool.md) | OS |
