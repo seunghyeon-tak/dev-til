@@ -6,11 +6,33 @@
 
 ---
 
+## 🎯 CPU 스케줄링이란?
+
+누가 먼저 컴퓨터를 쓸지 정하는 룰.
+
+컴퓨터 안에는 여러작업들(프로세스)가 있다.
+
+그런데 CPU는 한번에 하나만 처리할 수 있다.
+
+그래서 운영체제는 고민한다. -> 누구부터 시키지?
+
+---
+
 ## 🔍 요약
 
 CPU 스케줄링은 **여러 프로세스 중 어떤 프로세스에 CPU를 할당할지 결정하는 정책**이다.
 
 운영체제는 스케줄러를 통해 프로세스 상태를 관리하고, **CPU 효율을 극대화 하며 응답 시간과 대기 시간을 최소화** 하려한다.
+
+### 비유
+
+**놀이공원 줄서기**
+
+운영체제 : 놀이공원 직원
+
+CPU : 놀이기구 -> 한번에 한 사람만 탈 수 있음
+
+프로세스 : 손님 -> 놀이기구에 계속 줄을 선다.
 
 ---
 
@@ -31,60 +53,55 @@ CPU 스케줄링은 **여러 프로세스 중 어떤 프로세스에 CPU를 할�
 
 ## ✅ 주요 스케줄링 알고리즘
 
-| 알고리즘 | 설명 | 장점 | 단점 |
-|----------|------|------|------|
-| FCFS (First-Come, First-Served) | 도착 순서대로 처리 | 구현 간단 | Convoy Effect 발생 |
-| SJF (Shortest Job First) | 수행 시간이 짧은 작업 우선 | 평균 대기시간 최소화 | 실제 수행 시간 예측 어려움 |
-| Priority Scheduling | 우선순위 높은 작업 우선 | 중요 작업 빠르게 처리 | Starvation 발생 가능 |
-| Round Robin (RR) | 일정 시간 할당 후 순환 | 응답 시간 보장 | Context Switching 오버헤드 |
-| MLFQ (Multi-Level Feedback Queue) | 다단계 큐 + 피드백 적용 | 다양한 프로세스 유형에 유연 | 설정 복잡 |
+### 1️⃣ FCFS (First-Come, First-Served)
 
----
+- 성격 : 줄은 줄이자, 먼저 온 사람부터 처리해줄게
+- 특징 : 먼저 도착한 프로세스부터 순서대로 처리
+- 장점 : 간단하고 공정해 보임
+- 단점 : 느린 애가 먼저 오면 모두 기다림(Convoy Effect)
+- 예시
+    - 은행 번호표 시스템
+    - API 요청을 큐에 넣고 순서대로 처리
 
-## 🧪 코드/흐름 예시 (Round Robin 간단 의사 코드)
+### 2️⃣ SJF (Shortest Job First)
 
-```java
-public class RoundRobin {
-    public static void main(String[] args) {
-        Queue<Process> queue = new LinkedList<>();
-        queue.add(new Process("P1", 8));
-        queue.add(new Process("P2", 4));
-        queue.add(new Process("P3", 9));
+- 성격 : 일 빨리 끝낼 수 있는 사람 먼저 도와줄게
+- 특징 : 수행시간이 가장 짧은 프로세스부터 처리
+- 장점 : 평균 대기시간이 가장 짧음 (이론상 최고 효율)
+- 단점 : 짧은 작업 몰아주다 큰 작업은 계속 밀림 (기아 상태 발생 가능)
+- 예시
+    - 백그라운드 작업 중 빠르게 끝날 파일부터 먼저 압축
+    - 짧은 배치 먼저 실행
 
-        int timeQuantum = 4;
+### 3️⃣ RR (Round Robin)
 
-        while (!queue.isEmpty()) {
-            Process p = queue.poll();
-            p.run(timeQuantum);
-            if (!p.isComplete()) {
-                queue.add(p);
-            } else {
-                System.out.println(p.name + " 완료");
-            }
-        }
-    }
-}
+- 성격 : 공평하게 돌아가면서 한입씩 먹자
+- 특징 : 모든 프로세스에 같은 시간 할당 (타임퀀텀), 돌아가면서 실행
+- 장점 : 응답 속도 일정, 공평함
+- 단점 : 타임퀀텀이 너무 짧으면 오버헤드, 길면 FCFS와 다를게 없음
+- 예시
+    - 여러 사용자가 동시에 사용하는 채팅 서버
+    - 게임 클라이언트에서 여러 유저 처리
 
-class Process {
-    String name;
-    int remainingTime;
+### 4️⃣ Priority Scheduling
 
-    public Process(String name, int remainingTime) {
-        this.name = name;
-        this.remainingTime = remainingTime;
-    }
+- 성격 : 급한 사람 먼저, 중요도 높은 사람부터 처리할게
+- 특징 : 우선순위 높은 프로세스부터 실행
+- 장점 : 중요 작업 우선 처리 가능
+- 단점 : 낮은 우선순위는 계속 밀릴 수 있음 (기아 현상)
+- 예시
+    - 응급실 : 중증 환자 우선
+    - OS 내부 : 시스템 작업 우선, 사용자 작업 후순위
 
-    public void run(int timeSlice) {
-        int actualRunTime = Math.min(timeSlice, remainingTime);
-        System.out.println(name + " 실행 중 (" + actualRunTime + "초)");
-        remainingTime -= actualRunTime;
-    }
+### 5️⃣ Multilevel Queue
 
-    public boolean isComplete() {
-        return remainingTime <= 0;
-    }
-}
-```
+- 성격 : 너희들끼리 그룹 나눠서 각자 큐에 줄서
+- 특징 : 작업 성격 (실시간, 대화형, 백그라운드 등)에 따라 큐를 나눠 운영
+- 장점 : 작업 특성별로 최적화 가능
+- 단점 : 큐 간 이동이 불가하면 융통성 부족
+- 예시
+    - 윈도우에서 UI 이벤트와 백업 작업을 별도 스케줄링
+    - JVM GC 처리 우선순위
 
 ---
 
@@ -95,3 +112,36 @@ class Process {
     - 서버 처리 : RoundRobin 또는 MLFQ
 - Context Switching이 많은 경우 -> 성능 저하
 - Starvation, Convoy Effect 등의 문제 상황도 함께 고려해야함
+
+---
+
+## ❓ 개인적인 궁금함
+
+- CPU 스케줄링 알고리즘을 직접 작성해야할 필요가 많이 없다고하는데 그럼 어떻게 언제 저런 알고리즘들이 쓰이게 되는걸까?
+
+-> 운영체제가 정해놓은 스케줄링 정책에 따라 실행된다고함 (OS 레벨에서 정의)
+
+**예시로 이해해보기**
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(() -> {/* 이미지 처리 */});
+        Thread t2 = new Thread(() -> {/* 로그 기록 */});
+        t1.start();
+        t2.start();
+    }
+}
+```
+
+-> 해당 코드에서 스케줄링 알고리즘을 지정한적 없음
+
+하지만, 실제 실행 시 t1, t2는 OS 스케줄러에 등록되고
+
+운영체제는 그 시스템에 맞는 알고리즘(SJF / RR / Priority 등)을 기반으로 실행 순서를 결정함
+
+- 그럼 CPU 스케줄링 알고리즘을 직접 사용할것도 아닌데 왜 알아야할까?
+
+-> OS 내부에서 자동으로 동작하는 것이고, 그 원리를 이해해서 내 코드가 왜 느린지, 어떻게 개선할 수 있는지를 해석하고 추론하기 위해 배우는것이다.
+
+---
