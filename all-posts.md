@@ -4,6 +4,7 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-04-23 | [가상메모리와 페이지 교체 알고리즘](OS/memory-mangement/virtual-and-page-replacement.md) | OS |
 | 2025-04-23 | [메모리 구조 (페이징, 세그멘테이션)](OS/memory-mangement/paging-segmentation.md) | OS |
 | 2025-04-22 | [TCP/IP 4계층](Network/tcp-ip-4-layer.md) | Network |
 | 2025-04-15 | [OSI 7계층](Network/osi-7-layer.md) | Network |
