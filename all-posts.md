@@ -4,6 +4,8 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-05-24 | [데이터베이스 조작 기본 정리](Database/database_operation_basic.md) | Database |
+| 2025-05-23 | [컴퓨터 구조 - 데이터](ComputerStructure/data.md) | CS |
 | 2025-05-11 | [스케줄러 vs 디스패처](OS/scheduler-vs-dispatcher.md) | OS |
 | 2025-04-23 | [가상메모리와 페이지 교체 알고리즘](OS/memory-mangement/virtual-and-page-replacement.md) | OS |
 | 2025-04-23 | [메모리 구조 (페이징, 세그멘테이션)](OS/memory-mangement/paging-segmentation.md) | OS |
