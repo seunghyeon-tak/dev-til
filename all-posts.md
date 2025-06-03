@@ -4,6 +4,7 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-05-23 | [컴퓨터 구조 - 레지스터](ComputerStructure/register.md) | CS |
 | 2025-06-03 | [트랜잭션과 동시성 제어](Database/database_transaction.md) | Database |
 | 2025-06-03 | [데이터베이스 관리 기초](Database/database_management.md) | Database |
 | 2025-05-27 | [데이터베이스 조작 명령어](Database/database_operation_basic_2.md) | Database |
