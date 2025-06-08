@@ -4,7 +4,7 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
-| 2025-06-08 | [컴퓨터 구조 - 인터럽트](ComputerStructure) | CS |
+| 2025-06-08 | [컴퓨터 구조 - 인터럽트](ComputerStructure/interrupt.md) | CS |
 | 2025-06-07 | [데이터베이스 모델링](Database/database_modeling.md) | Database |
 | 2025-06-04 | [컴퓨터 구조 - 레지스터](ComputerStructure/register.md) | CS |
 | 2025-06-03 | [트랜잭션과 동시성 제어](Database/database_transaction.md) | Database |
