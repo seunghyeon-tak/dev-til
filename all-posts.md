@@ -4,6 +4,7 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-06-18 | [AWS - Route 53](devops/aws/route53.md) | aws |
 | 2025-06-14 | [데이터베이스 도입(정규화, 정규형 등)](Database/database_deployment.md) | Database |
 | 2025-06-12 | [AWS - EC2](devops/aws/ec2.md) | aws |
 | 2025-06-08 | [컴퓨터 구조 - 인터럽트](ComputerStructure/interrupt.md) | CS |
