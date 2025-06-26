@@ -4,6 +4,8 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-06-27 | [AWS - S3](devops/aws) | aws |
+| 2025-06-26 | [AWS - RDS](devops/aws/rds.md) | aws |
 | 2025-06-19 | [AWS - SSL/TLS - ELB vs Nginx](devops/aws/ssl_tls_elb.md) | aws |
 | 2025-06-18 | [AWS - Route 53](devops/aws/route53.md) | aws |
 | 2025-06-14 | [데이터베이스 도입(정규화, 정규형 등)](Database/database_deployment.md) | Database |
