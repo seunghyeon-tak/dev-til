@@ -4,6 +4,7 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-10-22 | [CS - JSON 직렬화/역직렬화](ComputerStructure/jsonSerialization.md) | CS |
 | 2025-06-27 | [AWS - S3](devops/aws/s3.md) | aws |
 | 2025-06-26 | [AWS - RDS](devops/aws/rds.md) | aws |
 | 2025-06-19 | [AWS - SSL/TLS - ELB vs Nginx](devops/aws/ssl_tls_elb.md) | aws |
