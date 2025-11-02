@@ -4,6 +4,8 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2025-11-02 | [CI/CD](devops/cicd/cicd.md) | CI/CD |
+| 2025-11-02 | [Docker](devops/docker/container.md) | docker |
 | 2025-10-27 | [API](Backend-infra/api.md) | Backend-infra |
 | 2025-10-23 | [CS - XML](ComputerStructure/xml.md) | CS |
 | 2025-10-22 | [CS - JSON 직렬화/역직렬화](ComputerStructure/jsonSerialization.md) | CS |
