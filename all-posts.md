@@ -4,6 +4,7 @@
 
 | 날짜       | 주제                          | 카테고리 |
 |------------|-------------------------------|----------|
+| 2026-01-07 | [network](Network/network.md) | Network |
 | 2025-11-05 | [compiler, Interpreter](ComputerStructure/compilerAndInterpreter.md) | CS |
 | 2025-11-04 | [crawling](Backend-infra/crawling.md) | Backend-infra |
 | 2025-11-02 | [CI/CD](devops/cicd/cicd.md) | CI/CD |
